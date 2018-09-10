@@ -1,0 +1,28 @@
+	<html ng-app="myApp">
+	<head>
+		<title>AngularJs 1.x</title>
+		<script type="text/javascript" src="https://code.angularjs.org/1.7.2/angular.js"></script>
+		<script type="text/javascript">
+			angular.module("myApp",[])
+
+			angular.module("myApp").controller("CustController", function($scope){
+				$scope.custName = "Foo Bar"
+				$scope.custCode = "000"
+			})
+		</script>
+	</head>
+	<body>
+		<div ng-controller="CustController">
+			Customer Name : <input ng-model="custName" type="text" id="CustomerName">
+			Customer Code : <input ng-model="custCode" type="text" id="CustomerCode">
+			<div id="divCustomerName">{{custName}}</div>
+			<div id="divCustomerCode">{{custCode}}</div>
+		</div>
+	</body>
+
+	</html>
+
+
+	<!--
+		https://www.youtube.com/watch?v=0kmdjqgO9IY
+	-->
